@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[var(--background-color)] h-[100vh] flex justify-center place-items-center">
+
+    <main
+        class="gap-8 flex justify-center place-items-center flex-col max-w-[400px] w-[95%] m-auto bg-white p-6 rounded-lg shadow-xl">
+        <h1 class="text-[1.5rem] font-semibold mt-6 text-[var(--primary-color)]">Password Generator</h1>
+        <div id="copy"
+            class="relative cursor-default bg-[var(--background-color)] w-[100%] rounded-lg border-[2px] border-[var(--accent-color)] text-center px-8 py-2">
+            <p id="showPassword" class="text-[var(--light-text-color)]">Your secure password</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 w-full">
+            <div class="flex flex-col gap-6 justify-center place-items-center">
+                <label  for="uppercase"><input class="checkbox" type="checkbox" value="uppercase">Uppercase</label>
+                <label for="lowercase"><input class="checkbox" type="checkbox" value="lowercase">Lowercase</label>
+            </div>
+            <div class="flex flex-col gap-6 justify-center place-items-center">
+                <label  for="numbers"><input checked class="checkbox" type="checkbox" value="numbers">Numbers</label>
+                <label for="symbols"><input checked class="checkbox" type="checkbox" value="symbols">Symbols</label>
+            </div>
+
+        </div>
+        <div class="flex  flex-wrap w-full gap-3">
+            <label class="flex-none whitespace-normal" for="length">Password Length: </label>
+            <input id="length" value="8" class="flex-1 bg-black" type="range" min="6" max="32">
+            <p id="showLength" class="flex-non"></p>
+        </div>
+
+        <button id="generate" class="w-full bg-[var(--primary-color)] flex justify-center place-items-center py-2 text-white rounded-lg hover:-translate-y-1 uppercase transition-all duration-300 hover:bg-[var(--secondary-color)]">Generate Password</button>
+    </main>
+
+    <script src="dist/script.js"></script>
+</body>
+
+</html>
